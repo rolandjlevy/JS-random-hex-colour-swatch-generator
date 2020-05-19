@@ -12,6 +12,17 @@ body {
   margin: 50px 100px;
 }
 
+.centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
 .block-wrapper {
   position: relative;
   clip-path: inset(10% 10% 10% 10% round 20%, 20%);
