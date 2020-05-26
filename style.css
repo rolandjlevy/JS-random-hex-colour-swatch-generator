@@ -12,6 +12,11 @@ body {
   margin: 50px 100px;
 }
 
+h3 {
+  font-family: 'Merienda One', cursive;
+  font-size: 2rem;
+}
+
 .centre {
   display: flex;
   flex-direction: column;
@@ -34,29 +39,27 @@ body {
 .block {
   background: #444;
   transform: translateY(0);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   cursor: cell;
+  border-radius: 7px;
 }
 
 .block, .block-overlay {
   width: var(--block-size);
   min-height: var(--block-size);
-  border-radius: 7px;
 }
 
 .block + .block-overlay {
   background: #fff;
   transform: translateY(0);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   opacity: 0;
 }
 
 .block:hover + .block-overlay {
-  --ypos: calc(var(--block-size)/2 - var(--block-size));
-  transform: translateY(var(--ypos)) rotate(-10deg);
+  transform: translateY(-75px);
   opacity: 1;
-  transition: all 0.5s ease;
-  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
 .block-overlay {
@@ -64,11 +67,33 @@ body {
   display: block;
   background: #fff;
   top: var(--block-size);
+  pointer-events: none;
 }
 
 .block-overlay a {
   /* cursor: pointer !important; */
-  /* pointer-events: initial; */
+  border: 1px solid red;
+  /* pointer-events: all; */
+}
+
+.hex-value {
+  text-decoration: none;
+}
+
+.hex-value:hover {
+  text-decoration: underline;
+}
+
+.hex-value::after {
+  /* <i class="fas fa-external-link-alt"></i> */
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+}
+
+.hex-value::after:hover {
+  text-decoration: none;
 }
 
 .swatch-wrapper {
@@ -108,14 +133,17 @@ body {
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
+  border: none;
+  padding: 3px 6px;
   background-color: #ddd;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
   background-color: #fff;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 5px 10px -5px #000000;
+  transition: all 0.2s ease;
 }
 
 /**************/
@@ -172,4 +200,8 @@ body {
 
 .m-t-10 {
   margin-top: 10px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
 }
