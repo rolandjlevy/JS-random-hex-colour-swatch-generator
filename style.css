@@ -36,6 +36,34 @@ h3 {
               0 16px 16px -10px rgba(0,0,0,0.5);
 }
 
+.fa-gradient {
+	background: radial-gradient(circle at 50% 0,
+      rgba(255,0,0,1),
+      rgba(255,0,0,0) 60%),
+    radial-gradient(circle at 6.7% 75%,
+      rgb(255, 230, 0),
+      rgba(0,0,255,0) 60%),
+    radial-gradient(circle at 93.3% 75%,
+      rgb(174, 0, 255),
+      rgba(0,255,0,0) 60%) white;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* .fa-palette {
+    color: 
+    radial-gradient(circle at 50% 0,
+      rgba(255,0,0,1),
+      rgba(255,0,0,0) 60%),
+    radial-gradient(circle at 6.7% 75%,
+      rgba(0,0,255,1),
+      rgba(0,0,255,0) 60%),
+    radial-gradient(circle at 93.3% 75%,
+      rgba(0,255,0,1),
+      rgba(0,255,0,0) 60%) white;
+} */
+
 .block-wrapper {
   position: relative;
   clip-path: inset(10% 10% 10% 10% round 20%, 20%);
