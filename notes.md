@@ -1,1 +1,2 @@
 - https://www.colorhexa.com
+- rgbToHsl function from https://gmigdos.wordpress.com/2011/01/13/javascript-convert-rgb-values-to-hsl/

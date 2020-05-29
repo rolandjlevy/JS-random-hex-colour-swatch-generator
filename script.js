@@ -11,7 +11,8 @@ let selected = null;
 const newColour = () => {
   if (selected) selected.classList.remove('active');
   const colour = rgbColour();
-  const col = colourObject(); // new approach pass object: hex and rgb together
+  const col = colourObject(); // new approach pass object: hex, rgb and hsl together
+  // console.log(col);
   loadSwatch(colour);
   addSwatch(colour);
 }
@@ -39,6 +40,7 @@ const selectSwatch = (e) => {
 }
 
 const loadSwatch = (colour) => {
+  console.log(colour);
   hexValue.textContent = `#${colour}`;
   hexValue.href = `https://www.colorhexa.com/${colour}`;
   const rgb = `${utils.hexToRgb(colour).join(',')}`;
@@ -63,7 +65,8 @@ const colourObject = () => {
   ];
   return {
     hex: `${utils.convert.dec2hex(r)}${utils.convert.dec2hex(g)}${utils.convert.dec2hex(b)}`,
-    rgb: `rgb(${[r, g, b].join(', ')})`
+    rgb: `rgb(${[r, g, b].join(', ')})`,
+    hsl: `hsl(${utils.rgbToHsl([r, g, b]).join(', ')})`
   }
 }
 
