@@ -9,7 +9,7 @@
 
 body {
   background: #444;
-  margin: 50px 100px;
+  margin: 20px 100px;
 }
 
 h3 {
@@ -26,6 +26,7 @@ h3 {
 .wrapper {
   height: 100vh;
   width: 100%;
+  margin: 20px auto;
 }
 
 .shadow {
